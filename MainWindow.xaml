@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PeopleBase"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        ResizeMode="NoResize"
+        Title="People" Height="576" Width="768">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Margin="0, 0, 0, 12">
+            <Label Content="S_earch" Target="{Binding ElementName=SearchTextBox}"/>
+            <TextBox x:Name="SearchTextBox" TabIndex="0"/>
+        </StackPanel>
         <DataGrid>
             
         </DataGrid>
